@@ -1,0 +1,197 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #0F1023;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+.preview__video {
+    background-color: #0F1023;
+    height: 100%;
+    width: 100%;
+    max-height: 700px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.preview__video__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: calc(100% - 100px);
+    width: 100%;
+    padding: 50px 0px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.col-8 {
+    flex: 1 3 calc(66.666% - 20px);
+    margin: 0 10px;
+}
+
+.col-6 {
+    flex: 1 3 calc(50% - 20px);
+    margin: 0 10px;
+}
+
+.col-4 {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 0 10px;
+}
+
+.preview__video__block_player {
+    width: 100%;
+    min-height: 447px;
+    height: auto;
+    border: 2px solid #5839F4;
+    box-shadow: 0px 4px 80px rgba(87, 184, 249, 0.8);
+    border-radius: 10px;
+    position: relative;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-height: 133px;
+    min-height: 133px;
+    height: 100%;
+    filter: drop-shadow(0px 4px 80px rgba(87, 184, 249, 0.8));
+    margin-bottom: 20px;
+    background-color: #0F1023;
+    border: 2px solid #52B7FC;
+    border-radius: 10px;
+}
+
+.card:last-child {
+    margin-bottom: 0px;
+}
+
+.card__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.card__content__image {
+    width: 100;
+    height: 80px;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card__content__image img {
+    width: 32px;
+    height: auto;
+}
+
+.card__content__number {
+    width: 112px;
+    height: 70px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.card__content__text {
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: start;
+    line-height: 24px;
+}
+
+@media(max-width:560px) {
+    .preview__video__block_player {
+        min-height: 280px;
+    }
+    .col-8 {
+        flex: 1 1 100%;
+        margin: 0 10px;
+    }
+    .col-4 {
+        flex: 1 1 100%;
+        margin: 0 10px;
+    }
+    .card {
+        max-height: 50px;
+        min-height: 50px;
+    }
+    .card:first-child {
+        margin-top: 20px;
+        max-height: 50px;
+        min-height: 50px;
+    }
+    .row {
+        padding: 0;
+        display: block;
+    }
+}
+
+.video__player {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.border_52B7FC {
+    border: 2px solid #52B7FC;
+}
+
+.border_7C64FA {
+    border: 2px solid #7C64FA;
+}
+
+.border_5839F4 {
+    border: 2px solid #5839F4;
+}
+
+.webcam__block {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.play__button {
+    width: 100px;
+    height: 100px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjUwIiBmaWxsPSIjMzI3RkY3Ii8+CjxwYXRoIGQ9Ik02Ni41IDQ3LjQzNzVDNjcuMTI1IDQ3LjgxMjUgNjcuNTYyNSA0OC4zNzUgNjcuODEyNSA0OUM2OC4wNjI1IDQ5LjY4NzUgNjguMDYyNSA1MC4zNzUgNjcuODEyNSA1MUM2Ny41NjI1IDUxLjY4NzUgNjcuMTI1IDUyLjE4NzUgNjYuNSA1Mi41NjI1TDQ0LjUgNjUuNTYyNUM0My44NzUgNjUuOTM3NSA0My4xODc1IDY2LjA2MjUgNDIuNSA2NS45Mzc1QzQxLjc1IDY1LjgxMjUgNDEuMTg3NSA2NS41IDQwLjY4NzUgNjQuOTM3NUM0MC4xODc1IDY0LjQzNzUgNDAgNjMuNzUgNDAgNjNWMzdDNDAgMzYuMTg3NSA0MC4yNSAzNS41IDQwLjc1IDM1QzQxLjI1IDM0LjUgNDEuODEyNSAzNC4xODc1IDQyLjU2MjUgMzQuMDYyNUM0My4yNSAzMy45Mzc1IDQzLjg3NSAzNC4wNjI1IDQ0LjUgMzQuNDM3NUw2Ni41IDQ3LjQzNzVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+    background-color: transparent;
+    border: 0px;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+}
